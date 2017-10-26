@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public/stylesheets/style.css"/>
+	</head>
+	<body>
+		<h1>Skier Dictionary</h1>
+		
+		<div class="box">
+			<ul>
+				<li>
+					<h3>Rip</h3>
+					<p>hsddddddddddjdsjhd</p>
+				</li>
+			</ul>
+			<div class="tijiao">
+				<input type='text' name='text' id="wen" value="" />
+				<input type='text' name='text1' id="nei" value="" />
+				<button id="btn">Add Term</button>
+			</div>
+		</div>
+	</body>
+</html>
+ <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"http://localhost:3000/",
+                type:"POST",
+                data:{},
+                success:function(e){
+                  $("#btn").click(function(){
+                  	  $("li").append("<h3>"+ e.name[text]+"</h3><p>"+e.name[text1]+"</p>")
+                  })
+                }
+            })
+        })
+    </script>
